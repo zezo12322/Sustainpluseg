@@ -1,0 +1,20 @@
+[build]
+  command = "node build.js"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Cache data/projects.json at CDN edge — 60s fresh, 5min stale-while-revalidate
+[[headers]]
+  for = "/data/projects.json"
+  [headers.values]
+    Cache-Control = "public, max-age=60, stale-while-revalidate=300"
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"

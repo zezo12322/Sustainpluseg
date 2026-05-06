@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Counter Animation ---------- */
-  const counters = document.querySelectorAll('[data-count]');
+  /* ---------- Counter Animation (fallback — GSAP version in animations.js takes over when loaded) ---------- */
+  const counters = document.querySelectorAll('[data-count]:not([data-counted])');
   if (counters.length) {
     const animateCounter = (el) => {
       const target = parseInt(el.dataset.count, 10);
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(el => observer.observe(el));
   }
 
-  /* ---------- Project Modal ---------- */
+  /* ---------- Project Modal (event delegation — works with dynamic cards) ---------- */
   const modalBackdrop = document.getElementById('projectModal');
   if (modalBackdrop) {
     const modalImg   = document.getElementById('modalImg');
@@ -132,33 +132,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc  = document.getElementById('modalDesc');
     const modalClose = document.getElementById('modalClose');
 
-    document.querySelectorAll('.project-card[data-modal]').forEach(card => {
-      card.addEventListener('click', () => {
-        modalImg.src     = card.dataset.img || '';
-        modalImg.alt     = card.dataset.title || '';
-        modalTitle.textContent = card.dataset.title || '';
-        modalTag.textContent   = card.dataset.tag || '';
-        modalDesc.textContent  = card.dataset.desc || '';
-        modalBackdrop.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') card.click();
-      });
-    });
+    const openModal = (card) => {
+      modalImg.src           = card.dataset.img || '';
+      modalImg.alt           = card.dataset.title || '';
+      modalTitle.textContent = card.dataset.title || '';
+      modalTag.textContent   = card.dataset.tag || '';
+      modalDesc.textContent  = card.dataset.desc || '';
+      modalBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
 
     const closeModal = () => {
       modalBackdrop.classList.remove('open');
       document.body.style.overflow = '';
     };
 
+    document.addEventListener('click', e => {
+      const card = e.target.closest('.project-card[data-modal]');
+      if (card) openModal(card);
+    });
+
+    document.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ' ') && document.activeElement?.matches('.project-card[data-modal]')) {
+        e.preventDefault();
+        openModal(document.activeElement);
+      }
+      if (e.key === 'Escape') closeModal();
+    });
+
     modalClose && modalClose.addEventListener('click', closeModal);
     modalBackdrop.addEventListener('click', e => {
       if (e.target === modalBackdrop) closeModal();
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeModal();
     });
   }
 

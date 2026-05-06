@@ -244,6 +244,13 @@ p { color: var(--text-secondary); }
 
 .nav-logo span { color: var(--accent); }
 
+.nav-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .nav-logo .logo-icon {
   width: 42px;
   height: 42px;

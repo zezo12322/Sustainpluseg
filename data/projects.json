@@ -1,0 +1,118 @@
+{
+  "projects": [
+    {
+      "id": "oman-ranking",
+      "category": "energy",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%A8%D8%AF%D9%88%D9%86-%D8%B9%D9%86%D9%88%D8%A7%D9%86-scaled.png",
+      "icon": "fa-solid fa-earth-africa",
+      "featured": true,
+      "en": {
+        "title": "Oman Environmental Ranking",
+        "tag": "Environmental Performance",
+        "shortDesc": "Boosted Oman's global environmental ranking from 145th to 50th through strategic consulting.",
+        "fullDesc": "Boosting Oman's environmental performance ranking from 145th to 50th globally — a landmark achievement through comprehensive environmental strategy consulting, policy recommendations, and implementation support across multiple government sectors."
+      },
+      "ar": {
+        "title": "تحسين التصنيف البيئي لعُمان",
+        "tag": "الاستشارات البيئية",
+        "shortDesc": "رفع التصنيف من المرتبة 145 إلى 50 عالمياً عبر خارطة طريق بيئية شاملة.",
+        "fullDesc": "ساعدت SustainPlus في رفع تصنيف سلطنة عُمان البيئي من المرتبة 145 إلى 50 عالمياً، من خلال تحليل الفجوات وتطوير خارطة طريق شاملة وفق مؤشرات الأداء البيئي الدولية."
+      }
+    },
+    {
+      "id": "ras-el-hekma",
+      "category": "water",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-16-at-13.40.29-300x226.jpeg",
+      "icon": "fa-solid fa-water",
+      "featured": true,
+      "en": {
+        "title": "Ras El Hekma Desalination Plant",
+        "tag": "Water Infrastructure",
+        "shortDesc": "1,100 m³/day seawater desalination using ROO technology for sustainable North Coast tourism.",
+        "fullDesc": "Developing a high-efficiency seawater desalination plant with a capacity of 1,100 m³/day using ROO technology to support sustainable tourism at Ras El Hekma on Egypt's North Coast."
+      },
+      "ar": {
+        "title": "محطة تحلية مياه رأس الحكمة",
+        "tag": "البنية التحتية المائية",
+        "shortDesc": "محطة تحلية بتقنية ROO بطاقة 1,100 م³/يوم لدعم السياحة المستدامة.",
+        "fullDesc": "تصميم وتنفيذ محطة تحلية بتقنية ROO (الأسمواض العكسي المحسّن) بطاقة 1,100 م³/يوم لخدمة مجتمع رأس الحكمة الساحلي في مصر."
+      }
+    },
+    {
+      "id": "blue-ethanol",
+      "category": "energy",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.51.542-300x200.jpeg",
+      "icon": "fa-solid fa-flask",
+      "featured": true,
+      "en": {
+        "title": "Blue Ethanol Production",
+        "tag": "Clean Energy",
+        "shortDesc": "Low-carbon biofuel with integrated carbon capture to reduce greenhouse gas emissions.",
+        "fullDesc": "Pioneering the production of Blue Ethanol as a low-carbon biofuel, integrating carbon capture technologies to reduce greenhouse gas emissions and advance Egypt's clean energy transition."
+      },
+      "ar": {
+        "title": "إنتاج الإيثانول الأزرق",
+        "tag": "الطاقة النظيفة",
+        "shortDesc": "وقود حيوي منخفض الكربون مع احتجاز الكربون للحد من انبعاثات الغازات الدفيئة.",
+        "fullDesc": "تقييم الجدوى البيئية والاقتصادية لمشروع إنتاج الإيثانول الأزرق من الطحالب البحرية، مع تحليل دورة الحياة الكاملة (LCA) وفق معايير ISO 14040."
+      }
+    },
+    {
+      "id": "ethydco-epd",
+      "category": "eia",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/New-Project13-300x180.webp",
+      "icon": "fa-solid fa-certificate",
+      "featured": false,
+      "en": {
+        "title": "Ethydco EPD Certification",
+        "tag": "LCA / EPD",
+        "shortDesc": "LCA study and EPD registration for polyethylene products to international standards.",
+        "fullDesc": "Life Cycle Assessment (LCA) and Environmental Product Declaration (EPD) registration for polyethylene products at Ethydco. Enabled the company to meet international sustainability reporting standards and access green-conscious markets."
+      },
+      "ar": {
+        "title": "شهادة EPD لإيثيدكو",
+        "tag": "LCA / EPD",
+        "shortDesc": "دراسة دورة حياة وتسجيل إعلان بيئي للمنتج لبولي إيثيلين إيثيدكو.",
+        "fullDesc": "تقييم دورة الحياة (LCA) وتسجيل إعلان المنتج البيئي (EPD) لمنتجات البولي إيثيلين في شركة إيثيدكو، لاستيفاء معايير الاستدامة الدولية والدخول إلى الأسواق البيئية الواعية."
+      }
+    },
+    {
+      "id": "adnoc-decarbonization",
+      "category": "training",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/000-300x169.webp",
+      "icon": "fa-solid fa-graduation-cap",
+      "featured": false,
+      "en": {
+        "title": "ADNOC Decarbonization Program",
+        "tag": "Training",
+        "shortDesc": "Advanced Carbon Capture training and emission reduction strategy for ADNOC teams.",
+        "fullDesc": "Advanced training program for ADNOC teams on Carbon Capture strategies, emission reduction methodologies, and decarbonization roadmap development — supporting UAE's net-zero ambitions."
+      },
+      "ar": {
+        "title": "برنامج إزالة الكربون — أدنوك",
+        "tag": "التدريب",
+        "shortDesc": "برنامج تدريب متقدم على احتجاز الكربون وخارطة طريق إزالة الكربون لفرق أدنوك.",
+        "fullDesc": "برنامج تدريب متقدم لفرق أدنوك على استراتيجيات احتجاز الكربون، ومنهجيات تخفيض الانبعاثات، وتطوير خارطة طريق لإزالة الكربون، دعماً لطموحات الإمارات في الحياد المناخي."
+      }
+    },
+    {
+      "id": "gsk-sustainability",
+      "category": "training",
+      "image": "https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.50.51.jpeg",
+      "icon": "fa-solid fa-users",
+      "featured": false,
+      "en": {
+        "title": "GSK Sustainability Leadership",
+        "tag": "Training",
+        "shortDesc": "GRI-aligned sustainability reporting training for GSK MEA managers.",
+        "fullDesc": "Training GSK MEA managers on sustainability reporting frameworks, GRI standards, and practical implementation strategies — enabling the company to meet global ESG disclosure requirements."
+      },
+      "ar": {
+        "title": "قيادة الاستدامة — GSK",
+        "tag": "التدريب",
+        "shortDesc": "تدريب مديري GSK الشرق الأوسط وأفريقيا على تقارير الاستدامة وفق معايير GRI.",
+        "fullDesc": "تدريب مديري GSK لمنطقة الشرق الأوسط وأفريقيا على أطر إعداد تقارير الاستدامة ومعايير GRI واستراتيجيات التنفيذ العملي، لتلبية متطلبات الإفصاح البيئي والاجتماعي والحوكمة (ESG) العالمية."
+      }
+    }
+  ]
+}
