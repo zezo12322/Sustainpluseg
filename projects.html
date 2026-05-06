@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Sustain Plus</title>
+  <meta name="description" content="Explore Sustain Plus projects — EIA studies, water quality research, renewable energy audits, and more across Egypt and MENA." />
+
+  <meta property="og:title"       content="Projects | Sustain Plus" />
+  <meta property="og:description" content="Our portfolio of environmental consulting projects across Egypt and MENA." />
+  <meta property="og:image"       content="images/hero/hero-bg.jpg" />
+
+  <link rel="alternate" hreflang="en" href="https://www.sustainplus-eg.com/projects.html" />
+  <link rel="alternate" hreflang="ar" href="https://www.sustainplus-eg.com/ar/projects.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.45rem 1.2rem;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .project-card[data-filter].hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <div class="container nav-wrapper">
+    <a href="index.html" class="nav-logo" aria-label="Sustain Plus Home">
+      <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+      Sustain <span>Plus</span>
+    </a>
+    <nav class="nav-links" role="navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-controls">
+      <div class="lang-switcher">
+        <a href="projects.html"    class="active" hreflang="en">EN</a>
+        <a href="ar/projects.html" hreflang="ar">AR</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </span>
+      </button>
+      <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" aria-label="Projects page hero">
+  <div class="container">
+    <h1>Our Projects</h1>
+    <p>Delivering measurable environmental impact across industries and geographies.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+      <span aria-current="page">Projects</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ===== PROJECTS GRID ===== -->
+<section class="section" aria-labelledby="projects-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="projects-heading">Portfolio</h2>
+      <p>Over 200 completed projects across Egypt, the Gulf, and Africa.</p>
+      <span class="underline" aria-hidden="true"></span>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" role="group" aria-label="Filter projects by category" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="eia" aria-pressed="false">EIA</button>
+      <button class="filter-btn" data-filter="water" aria-pressed="false">Water</button>
+      <button class="filter-btn" data-filter="energy" aria-pressed="false">Energy</button>
+      <button class="filter-btn" data-filter="industry" aria-pressed="false">Industry</button>
+      <button class="filter-btn" data-filter="training" aria-pressed="false">Training</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- Project 1 -->
+      <article class="project-card" data-filter="energy"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/تصميم-بدون-عنوان-scaled.png"
+        data-title="Oman Environmental Ranking"
+        data-tag="Environmental Performance"
+        data-desc="Boosting Oman's environmental performance ranking from 145th to 50th globally — a landmark achievement through comprehensive environmental strategy consulting, policy recommendations, and implementation support across multiple government sectors."
+        tabindex="0" role="button" aria-label="View: Oman Environmental Ranking"
+        data-aos="fade-up" data-aos-delay="0">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/تصميم-بدون-عنوان-scaled.png" alt="Oman Environmental Ranking" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-earth-africa\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Environmental Performance</span>
+          <h3>Oman Environmental Ranking</h3>
+          <p>Boosted Oman's global environmental ranking from 145th to 50th through strategic consulting.</p>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card" data-filter="water"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-16-at-13.40.29-300x226.jpeg"
+        data-title="Ras El Hekma Desalination Plant"
+        data-tag="Water Infrastructure"
+        data-desc="Developing a high-efficiency seawater desalination plant with a capacity of 1,100 m³/day using ROO technology to support sustainable tourism at Ras El Hekma on Egypt's North Coast."
+        tabindex="0" role="button" aria-label="View: Ras El Hekma Desalination Plant"
+        data-aos="fade-up" data-aos-delay="60">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-16-at-13.40.29-300x226.jpeg" alt="Ras El Hekma Desalination Plant" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-water\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Water Infrastructure</span>
+          <h3>Ras El Hekma Desalination Plant</h3>
+          <p>1,100 m³/day seawater desalination using ROO technology for sustainable North Coast tourism.</p>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card" data-filter="energy"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.51.542-300x200.jpeg"
+        data-title="Blue Ethanol Production"
+        data-tag="Clean Energy"
+        data-desc="Pioneering the production of Blue Ethanol as a low-carbon biofuel, integrating carbon capture technologies to reduce greenhouse gas emissions and advance Egypt's clean energy transition."
+        tabindex="0" role="button" aria-label="View: Blue Ethanol Production"
+        data-aos="fade-up" data-aos-delay="120">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.51.542-300x200.jpeg" alt="Blue Ethanol Production" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-flask\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Clean Energy</span>
+          <h3>Blue Ethanol Production</h3>
+          <p>Low-carbon biofuel with integrated carbon capture to reduce greenhouse gas emissions.</p>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card" data-filter="eia"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/New-Project13-300x180.webp"
+        data-title="Ethydco EPD Certification"
+        data-tag="LCA / EPD"
+        data-desc="Life Cycle Assessment (LCA) and Environmental Product Declaration (EPD) registration for polyethylene products at Ethydco. Enabled the company to meet international sustainability reporting standards and access green-conscious markets."
+        tabindex="0" role="button" aria-label="View: Ethydco EPD Certification"
+        data-aos="fade-up" data-aos-delay="0">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/New-Project13-300x180.webp" alt="Ethydco EPD Certification" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-certificate\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">LCA / EPD</span>
+          <h3>Ethydco EPD Certification</h3>
+          <p>LCA study and EPD registration for polyethylene products to international standards.</p>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card" data-filter="training"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/000-300x169.webp"
+        data-title="ADNOC Decarbonization Program"
+        data-tag="Training"
+        data-desc="Advanced training program for ADNOC teams on Carbon Capture strategies, emission reduction methodologies, and decarbonization roadmap development — supporting UAE's net-zero ambitions."
+        tabindex="0" role="button" aria-label="View: ADNOC Decarbonization Program"
+        data-aos="fade-up" data-aos-delay="60">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/000-300x169.webp" alt="ADNOC Decarbonization Program" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-graduation-cap\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Training</span>
+          <h3>ADNOC Decarbonization Program</h3>
+          <p>Advanced Carbon Capture training and emission reduction strategy for ADNOC teams.</p>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="project-card" data-filter="training"
+        data-modal="true"
+        data-img="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.50.51.jpeg"
+        data-title="GSK Sustainability Leadership"
+        data-tag="Training"
+        data-desc="Training GSK MEA managers on sustainability reporting frameworks, GRI standards, and practical implementation strategies — enabling the company to meet global ESG disclosure requirements."
+        tabindex="0" role="button" aria-label="View: GSK Sustainability Leadership"
+        data-aos="fade-up" data-aos-delay="120">
+        <div class="project-thumb">
+          <img src="https://www.sustainplus-eg.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-02-at-22.50.51.jpeg" alt="GSK Sustainability Leadership Training" width="600" height="375" loading="lazy"
+            onerror="this.parentElement.classList.add('img-placeholder');this.style.display='none';this.parentElement.innerHTML='<i class=\'fa-solid fa-users\' style=\'font-size:4rem;color:var(--primary)\'></i>'" />
+          <div class="project-overlay" aria-hidden="true">
+            <span class="project-overlay-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Training</span>
+          <h3>GSK Sustainability Leadership</h3>
+          <p>GRI-aligned sustainability reporting training for GSK MEA managers.</p>
+        </div>
+      </article>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- ===== PROJECT MODAL ===== -->
+<div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle"></h3>
+      <button id="modalClose" class="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img id="modalImg" src="" alt="" loading="lazy" />
+      <span id="modalTag" class="project-tag"></span>
+      <p id="modalDesc" style="margin-top:0.75rem"></p>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem">
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enquire About Similar Project
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+          Sustain <span>Plus</span>
+        </a>
+        <p>Leading the transformation towards a sustainable world.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> About</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Services</a></li>
+          <li><a href="projects.html"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Projects</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#consulting"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Consulting</a></li>
+          <li><a href="services.html#permits"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Permits</a></li>
+          <li><a href="services.html#training"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Training</a></li>
+          <li><a href="services.html#eia"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> EIA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Al-Fanar Tower, 10th Floor, 398 El Horreya Rd, Sidi Gaber, Alexandria, Egypt</span></li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:info@sustainplus-eg.com">info@sustainplus-eg.com</a></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+201090021674">+20 109 002 1674</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sustain Plus. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &middot; <a href="#">Company Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+  /* Project category filter */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card[data-filter]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.filter === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
