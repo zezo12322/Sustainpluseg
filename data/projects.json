@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": "d60a98dd-9115-4cbb-80ce-7e8b6ed71357",
+      "id": "5da66845-2ede-461f-bba0-fe837c1eb86f",
       "category": "Consulting",
       "featured": true,
       "image": null,
@@ -9,14 +9,52 @@
       "en": {
         "title": "Test Project",
         "tag": "Consulting",
-        "shortDesc": "This is a test project.",
-        "fullDesc": "This is a test project."
+        "shortDesc": "djvskmv",
+        "fullDesc": "djvskmv"
       },
       "ar": {
         "title": "مشروع تجريبي",
         "tag": "استشارات",
-        "shortDesc": " هذا مشروع تجريبي.",
-        "fullDesc": " هذا مشروع تجريبي."
+        "shortDesc": "مةسكمةر",
+        "fullDesc": "مةسكمةر"
+      }
+    },
+    {
+      "id": "52b0ef0a-3ebb-4fb9-bc41-2e0e281e140c",
+      "category": "Consulting",
+      "featured": true,
+      "image": "https://cdn.sanity.io/images/dpltiixd/production/521436cdc8bdc95a5c65368aab7e143497d6fe0f-1240x502.jpg",
+      "icon": null,
+      "en": {
+        "title": "Test Project",
+        "tag": "Consulting",
+        "shortDesc": "ءيؤ شكيؤىن",
+        "fullDesc": "ءيؤ شكيؤىن"
+      },
+      "ar": {
+        "title": "مشروع تجريبي",
+        "tag": "استشارات",
+        "shortDesc": "شءينؤكشينؤ",
+        "fullDesc": "شءينؤكشينؤ"
+      }
+    },
+    {
+      "id": "5b8b667e-84af-4c77-88f3-dd0096b52acf",
+      "category": "Consulting",
+      "featured": true,
+      "image": "https://cdn.sanity.io/images/dpltiixd/production/521436cdc8bdc95a5c65368aab7e143497d6fe0f-1240x502.jpg",
+      "icon": null,
+      "en": {
+        "title": "Test Project",
+        "tag": "Consulting",
+        "shortDesc": "lvjnsfodvnoefv",
+        "fullDesc": "lvjnsfodvnoefv"
+      },
+      "ar": {
+        "title": "مشروع تجريبي",
+        "tag": "استشارات",
+        "shortDesc": "ىبخهرىثخبرىخ",
+        "fullDesc": "ىبخهرىثخبرىخ"
       }
     }
   ]
