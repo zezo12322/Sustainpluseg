@@ -211,38 +211,36 @@ p { color: var(--text-secondary); }
 .site-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: 100%;
   z-index: 1000;
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: none;
   border-radius: 0;
+  /* Only width / top / border-radius / bg change — center stays fixed */
   transition:
-    top        0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    left       0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    right      0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    width      0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    top           0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    width         0.45s cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    background 0.4s ease,
-    backdrop-filter 0.4s ease,
-    box-shadow 0.4s ease;
+    background    0.4s  ease,
+    box-shadow    0.4s  ease,
+    backdrop-filter 0.4s ease;
 }
 
-/* Floating pill on scroll */
+/* Floating pill on scroll — shrinks symmetrically from center */
 .site-header.scrolled {
   top: 14px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
   width: min(960px, calc(100vw - 32px));
   border-radius: 100px;
   background: rgba(15, 61, 34, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: none;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255,255,255,0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.07);
 }
 
 .site-header.scrolled .nav-wrapper { height: 60px; }
@@ -1358,9 +1356,6 @@ body.rtl .back-to-top { right: auto; left: 2rem; }
 @media (max-width: 640px) {
   .site-header.scrolled {
     top: 0;
-    left: 0;
-    right: 0;
-    transform: none;
     width: 100%;
     border-radius: 0;
   }
